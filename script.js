@@ -24,14 +24,11 @@ inputSearch.addEventListener('submit', function (event) {
             console.log(weatherData);
 
             // show the day's weather data
-            document.getElementById('temp-today').textContent = weatherData.main.temp;
-            document.getElementById('wind-today').textContent = weatherData.wind.speed;
-            document.getElementById('humidity-today').textContent = weatherData.main.humidity;
+            document.getElementById('temp-today').textContent = weatherData.list[0].main.temp
+            document.getElementById('wind-today').textContent = weatherData.list[0].wind.speed;
+            document.getElementById('humidity-today').textContent = weatherData.list[0].main.humidity;
             document.getElementById('current-city-name').textContent = userInput;
             document.getElementById('search-history').appendChild(document.getElementById('past-searches')).textContent = userInput;
-       
-            let icon = weatherData.weather[0].icon;
-            document.getElementById('weather-icon-today').value =`http://openweathermap.org/img/wn/"${icon}"@2x.png`;
         })   
 })
 

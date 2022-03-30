@@ -44,5 +44,5 @@ font-weight: 700;
 }
 
 #forecast{
-    display: flex;
+    display: inline-block;
 }
