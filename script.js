@@ -48,6 +48,7 @@ async function getWeatherText(url) {
 
 let parseWeather = function (weatherText) {
     let weatherJSON = JSON.parse(weatherText);
+    console.log(weatherJSON);
     let dailyForecast = weatherJSON.daily;
     console.log(dailyForecast);
     for (x = 0; x < 7; ++x) {
