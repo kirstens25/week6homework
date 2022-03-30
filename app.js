@@ -23,10 +23,15 @@ inputSearch.addEventListener('submit', function(event){
 
     // call weather api to retrieve weather data by city name
     // call the current weather api
-    getWeather(userInput)
-        .then(function(weatherData){
+    function getWeather(userInput){
+        then(function(weatherData){
             console.log(weatherData);
         })
+        document.getElementById('current-city-name').textContent = userInput
+        console.log('current city name')
+        document.getElementById('span-today-temp').textContent = tempToday.toFixed(2)
+        document.getElementById('img-today-icon').src = iconCodeToPic(weatherData.current.weather[0].icon);
+    getWeather(userInput)}
 // save the search history to local storage
 
 // list underneath search section
@@ -34,7 +39,7 @@ inputSearch.addEventListener('submit', function(event){
 
 
 
-// show the weather data for that day, in that city:
+// show the weather data (temperature, wind, humidity) for that day and the next 5 days, in that city:
 
 let parseWeather = function(weatherText) {
     let weatherJSON = JSON.parse(weatherText);
@@ -46,6 +51,11 @@ let parseWeather = function(weatherText) {
         if (today > 6) {
             today = today - 7;
         }
+
+       include:  // date
+    // temperature
+        // humidity
+        // icon representing weather forecast
         console.log("today is",today);
         let dayOfWeek = getDayOfWeek(today);
         let description = day.weather[0].description;
@@ -57,21 +67,12 @@ let parseWeather = function(weatherText) {
         displayWeatherDay(dayOfWeek, description, icon, sunset, highTemp, lowTemp, humidity)
     }
 }
-// temperature
-
-// wind
-
-// humidity
-
-// UV Index
 
 
 
 // and the next 5 days:
 // date
-// icon representing weather forecast
 // temperature
-// wind
 // humidity
 
 

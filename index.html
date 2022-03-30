@@ -2,58 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/style.css">
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/style.css">
+  <title>Weather Dashboard</title>
 </head>
 
 <body>
 
-    <main>
-        <header>
-            <div id="heading-title">
-                <h1>Weather Dashboard</h1>
+  <main>
+    <header>
+      <div id="heading-title">
+        <h1>Weather Dashboard</h1>
+      </div>
+    </header>
+
+    <section id="weather-content">
+      <div class="row">
+        <div class="col-3">
+          <h2>Search for a City:</h2>
+          <div>
+          <form id="search-info">
+            <input id="input-search"><br>
+            <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+          <div id="search-history">
+            <ul id="past-searches">
+              <li>test</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-9" id="current-city-info">
+          <h2><span id="current-city-name"></span> <span id="weather-icon-today"></span></h2>
+          <p>Current Temperature: <span id="temp-today"></span>˚C <br>
+          Current Wind: <span id="wind-today"></span> metres/sec <br>
+          Current Humidity: <span id="humidity-today"></span>%</p>
+
+          <div class="row">
+            <div class="col-12">
+              <h2>Five Day Forecast</h2>
+              <div id="forecast">
+                </ul>
+              </div>
             </div>
-        </header>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="weather-content">
-            <div class="row">
-                <div class="col-3">
-                    <h2>Search for a City:</h2>
-                    <div id="search-info">
-                    <input id="input-search"><br>
-                    <button class="btn btn-primary">Search</button>
-                </div>
-                <div id="search-history">
-                    <ul>
-                        <li>test</li>
-                    </ul>
-                </div>
-                </div>
-                <div class="col-9" id="current-city-info">
-                    <h2><span id="current-city-name">test city</span> (<span id="todays-date">test date</span>)</h2>
-
-                    <div class="row">
-                    <div class="col-12">
-                        <h2>Five Day Forecast</h2>
-                        <div id="forecast">
-                        </ul>   
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-  <script src="/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="/app.js"></script>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="/script.js"></script>
 
 
 </body>
